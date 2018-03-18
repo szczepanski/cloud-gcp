@@ -43,7 +43,7 @@ across clusters of computers via programming models
 
 ## Architecture
 
-![alt txt] (https://github.com/szczepanski/cloud-gcp/blob/master/media/architecture.png)
+![alt text] (https://github.com/szczepanski/cloud-gcp/blob/master/media/architecture.png)
 
 
 
