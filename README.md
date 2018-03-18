@@ -43,7 +43,17 @@ across clusters of computers via programming models
 
 ## Architecture
 
-![alt text] (https://github.com/szczepanski/cloud-gcp/blob/master/media/architecture.png)
+![alt text](https://github.com/szczepanski/cloud-gcp/blob/master/media/architecture.png)
+
+Components:
+
+1. YARN - framework (job scheduling, resource management)
+2. HDFS - distributed storage (high throughput access to application data)
+3. MapReduce - distributed computing ()
+
+plus common tools - finish here
+
+
 
 
 
