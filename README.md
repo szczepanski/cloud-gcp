@@ -38,7 +38,7 @@ gcloud config list --all
 
 # Hadoop
 
-Opensource appache framework written in Java. It allows distributed processing of large datasets
+Appache opensource framework written in Java. It allows distributed processing of large datasets
 across clusters of computers via programming models
 
 ## Architecture
@@ -47,11 +47,29 @@ across clusters of computers via programming models
 
 Components:
 
-1. YARN - framework (job scheduling, resource management)
-2. HDFS - distributed storage (high throughput access to application data)
-3. MapReduce - distributed computing ()
+1. YARN - framework (job scheduling and cluster resource management)
+2. HDFS - distributed file system (high throughput access to application data)
+3. MapReduce -  yarn based distributed system for parallel processing of large data sets 
 
-plus common tools - finish here
+Common Utilities - Java libriaries and utilities required by hadoop components.
+
+## Basic workflow
+
+1. MapReduce - API used to define map and reduce the task as output to => 
+2. YARN - works out where and how to run the task and stores the result in => 
+3. HDFS
+
+## Hadoop Ecosystem
+
+- HIVE
+- HBase
+- Pig
+- Spark
+- Kafka
+- Flink 
+
+## Hadoop Vs GCP
+![alt txt](https://github.com/szczepanski/cloud-gcp/blob/master/media/hadoopVSgcp.png)
 
 
 
