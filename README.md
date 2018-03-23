@@ -72,6 +72,7 @@ Common Utilities - Java libriaries and utilities required by hadoop components.
 ![alt txt](https://github.com/szczepanski/cloud-gcp/blob/master/media/hadoopVSgcp.png)
 
 
+## Advantages
 
 
 
