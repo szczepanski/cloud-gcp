@@ -4,7 +4,7 @@ https://www.udemy.com/hands-on-google-cloud-platformgcp-cloud-architect/learn/v4
 #  gcpDev1 project basics
 
 1. Add new  gcpDev1 project
-2. comppute/vm instances
+2. compute/vm instances
 
 ## google shell
 
@@ -61,10 +61,33 @@ Common Utilities - Java libriaries and utilities required by hadoop components.
 
 ## Hadoop Ecosystem
 
-- HIVE
+- HIVE [GCP - Big Query]
+Both are not to be used for online OLTP (Online Transaction Processing)
+  - works with structured data stored in HDFS in Hive Query Language (similar to SQL)
+  - runs Map Reduce for data processing in HDFS
+  - assists in analytics and business intelligence (BI)
+
 - HBase
+  - non relational DB running atop of HDFS
+  - designed to work on large scale - billions of rows with millions of columns
+  - horizontal scaling
+  - based on Google Big Table
+  - runs batch processing only
+  - data to be accessed in sequential order only 
+  - good use case in random access of huge data
+  
 - Pig
+  - works with structured data using PIG latin language
+  - also works well with unstructured, incomplete datasets
+  - use case for scripting not involving Java Python or SQL
+  - Pig Lating program consists of operations series(transformations) applied to input data. 
+  It runs MapReduce program in backend to produce output.
+  - Pig transforms unstructed data into structured output
+  - it is pre installed on Google DataProc machines
+  
+
 - Spark
+
 - Kafka
 - Flink 
 
@@ -73,6 +96,15 @@ Common Utilities - Java libriaries and utilities required by hadoop components.
 
 
 ## Advantages
+
+- open source
+- supports user to rapidly write and test distributed systems
+- FTHA - fault tolerance and availibility is hardware independent
+- servers can be added or removed form cluster dynamicly with no interruptions
+- wide platform compatibility as Java based
+- 
+
+
 
 
 
