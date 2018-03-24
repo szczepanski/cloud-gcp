@@ -1,7 +1,9 @@
 #### Following notes are based on udemy course by Notez
 https://www.udemy.com/hands-on-google-cloud-platformgcp-cloud-architect/learn/v4/overview
 
-#  gcpDev1 project basics
+# GCP 
+
+##  gcpDev1 project basics
 
 1. Add new  gcpDev1 project
 2. compute/vm instances
@@ -36,6 +38,19 @@ gcloud config list
 
 gcloud config list --all
 
+## Computing
+
+
+
+
+
+
+
+
+
+
+
+
 # Hadoop
 
 Appache opensource framework written in Java. It allows distributed processing of large datasets
@@ -49,6 +64,10 @@ Components:
 
 1. YARN - framework (job scheduling and cluster resource management)
 2. HDFS - distributed file system (high throughput access to application data)
+Disadvantage of HDFS is the fact that it needs to run continuously (NameNodes Metadata,DataNodes,Server configuration).
+Therefore, its utilzation might be expensive. 
+To avoid high costs, Google Cloud Storage might be used instead.
+
 3. MapReduce -  yarn based distributed system for parallel processing of large data sets 
 
 Common Utilities - Java libriaries and utilities required by hadoop components.
@@ -87,7 +106,9 @@ Both are not to be used for online OLTP (Online Transaction Processing)
   
 
 - Spark
-
+  - distributed compute engine used along with Hadoop
+  - can be seen as shell used to rapidly process datasets
+  - Pig and Spark are utilized in data transformations (rich labriaries)
 - Kafka
 - Flink 
 
@@ -95,14 +116,49 @@ Both are not to be used for online OLTP (Online Transaction Processing)
 ![alt txt](https://github.com/szczepanski/cloud-gcp/blob/master/media/hadoopVSgcp.png)
 
 
-## Advantages
+## Hadoop Advantages
 
 - open source
 - supports user to rapidly write and test distributed systems
 - FTHA - fault tolerance and availibility is hardware independent
 - servers can be added or removed form cluster dynamicly with no interruptions
 - wide platform compatibility as Java based
-- 
+
+## HDFS Architecture
+
+- It is Hadoop distributed file system supporting large data sets
+- use case - batch processing
+- Not suitable for real time applications 
+- hardware independed (higt FTHA)
+
+### Write Read Architecture 
+
+#### Architecture
+
+- cluster - group of Data Nodes (data disks)
+- data nodes
+- NameNode - master node single main / master node (contains all metadata) can be seen as index interface to Data Nodes.
+In Multi NameNode scenarios all NameNodes have to be kept in synchronized by dedicated tool - ZOO KEEPER. 
+- slave node - back up
+
+![alt text](https://github.com/szczepanski/cloud-gcp/blob/master/media/hdfs%20arch.png)
+
+#### Data reading 
+- Namenode contains metadata - indexing needed for reading form block locations (look up locations)
+
+Block Replication
+
+![alt text](https://github.com/szczepanski/cloud-gcp/blob/master/media/block%20replication.png)
+
+Related Metadata is being stored in neccessary NameNodes. 
+
+To avoid duplication, replica BlockData is stored in number of dataNodes
+
+![alt text](https://github.com/szczepanski/cloud-gcp/blob/master/media/replication.png)
+
+
+
+
 
 
 
