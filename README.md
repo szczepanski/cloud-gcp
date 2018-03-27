@@ -1,6 +1,13 @@
-#### Following notes are based on udemy course by Notez
-https://www.udemy.com/hands-on-google-cloud-platformgcp-cloud-architect/learn/v4/overview
+Piotr Szczepanski
 
+# Google Cloud Platform and Hadoop
+<br>
+References:
+
+https://www.udemy.com/hands-on-google-cloud-platformgcp-cloud-architect/learn/v4/overview
+<br>
+<br>
+<br>
 # GCP 
 
 ##  gcpDev1 project basics
