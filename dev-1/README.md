@@ -17,6 +17,10 @@ mv /var/www/html/index.html /var/www/html/index.php
 cat <<EOF > /var/www/html/index.php
  <html>
  <body><br>{“foo”: “barr”}</br>
+<br>
+<br>
+<br>Server name / zone:</br>
+<br>
  <?php
  echo gethostname();
  ?>
