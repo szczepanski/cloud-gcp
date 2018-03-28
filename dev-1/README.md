@@ -103,7 +103,7 @@ Network Services/Load Balancing
     - access Load Balancer from instance running from Belgium zone and Uk Zone
     
 ## Testing AutoScaling - CPU  
-install following py script 
+install following py script to boost CPU utilzation above 40% and trigger autoscaling
 
 ```shell
     #!/usr/bin/env python
@@ -128,4 +128,7 @@ if __name__ == '__main__':
  and
  ```shell
  apt-get install cpulimit
+ python python-cpu.py &
  ```
+ 
+ 
