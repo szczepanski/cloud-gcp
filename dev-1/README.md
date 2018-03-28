@@ -64,5 +64,12 @@ Network Services/Load Balancing
   - select instance group - eu-west-1
   - set balancing mode to rate - requests per second (rps)
   - maximum rate: 1, capacity 100 %
+ 
+ - create new https health check 
+ - traffic affinity (how the traffic is to be routed) 
+  - leave at none (session stickyness/ persistance) - new traffiwill be directed to same instance
+
+ 
+ 
 
  
