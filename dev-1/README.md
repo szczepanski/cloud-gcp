@@ -10,6 +10,7 @@ Compute Engine/Instance Template
 
 ```shell 
 #! /bin/bash
+sudo su
 apt-get update -y
 apt-get install apache2 -y
 apt-get install php7.0 -y
@@ -89,5 +90,9 @@ Network Services/Load Balancing
     
     service apache2 reload
     
+    
+    # testing
+    openssl s_client -connect localhost:443
+
     ```
  
