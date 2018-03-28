@@ -2,6 +2,12 @@ Piotr Szczepanski
 
 # Ravelin - http load balancing configuration
 
+More Complex 3 Tier AWS infustructure: 
+
+https://github.com/szczepanski/cloud-aws
+
+Simple GCP Load Balancing below: 
+
 ## Set Up Instance Template 
 
 Compute Engine/Instance Template
@@ -103,7 +109,7 @@ Network Services/Load Balancing
     - access Load Balancer from instance running from Belgium zone and Uk Zone
     
 ## Testing Auto Scaling - CPU  
-install following py script to boost CPU utilization above 40% and trigger autoscaling
+install following py script to boost CPU utilization above 40% and test autoscaling
 
 ```shell
     #!/usr/bin/env python
