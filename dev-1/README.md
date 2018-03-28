@@ -99,4 +99,31 @@ Network Services/Load Balancing
     openssl s_client -connect localhost:443
 
     ```
+    
+    ## Testing Load Balancing: 
+    - access Load Balancer from instance running from Belgium zone and Uk Zone
+    
+    ## Testing AutoScaling - CPU  
+install following py script 
+
+```shell
+    #!/usr/bin/env python
+"""
+Produces load on all available CPU cores
+"""
+
+from multiprocessing import Pool
+from multiprocessing import cpu_count
+
+def f(x):
+    while True:
+        x*x
+
+if __name__ == '__main__':
+    processes = cpu_count()
+    print 'utilizing %d cores\n' % processes
+    pool = Pool(processes)
+    pool.map(f, range(processes))
+    
+```    
  
