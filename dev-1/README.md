@@ -1,6 +1,6 @@
 Piotr Szczepanski
 
-# Ravelin - https load balancing configuration
+# Ravelin - http load balancing configuration
 
 ## Set Up Instance Template 
 
@@ -10,20 +10,20 @@ Compute Engine/Instance Template
 
 ```shell 
 #! /bin/bash
-sudo su
 apt-get update -y
 apt-get install apache2 -y
 apt-get install php7.0 -y
 mv /var/www/html/index.html /var/www/html/index.php
 cat <<EOF > /var/www/html/index.php
-<html>
-<body> HO!!!<br></br>
-<?php
-echo gethostname(),
-?>
+ <html>
+ <body><br>{“foo”: “barr”}</br>
+ <?php
+ echo gethostname();
+ ?>
 </body>
 </html>
 EOF
+
 ```
 
 ## Set up 2 Instance Groups (Fault Toleranace, High Availilbility)
