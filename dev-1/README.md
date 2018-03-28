@@ -6,7 +6,7 @@ Piotr Szczepanski
 
 Compute Engine/Instance Template
 - g1-small (1 vCPU, 1.7 GB memory)
-- Add Start Up script(replace index and feedback hostname - landing server check):
+- add start up script(replace index and feedback hostname - landing server check):
 
 ```shell 
 #! /bin/bash
@@ -31,7 +31,7 @@ EOF
 set it multi-zone - europe-west2 London
 select the instance template
 autoscaling on - based on:
-- CPU Usage - 40% => scale up
+- cpu usage - 40% => scale up
 - auto-scaling group = 1 and max = 2
 - add new HTTPS based health check 
 - initial delay 150 sec
@@ -52,6 +52,17 @@ VPC Network/External IP addresses/Reserve static IP addresses
 - reserve it
 
 ## Setup Load Balancing
+
 Network Services/Load Balancing
+- name it
+- backend configuration/create https backend service - eu-west-2
+  - select instance group - eu-west-2
+  - set balancing mode to rate - requests per second (rps)
+  - maximum rate: 1, capacity 100 %
+ 
+ - add 2nd backend configuration/create https backend service - eu-west-1
+  - select instance group - eu-west-1
+  - set balancing mode to rate - requests per second (rps)
+  - maximum rate: 1, capacity 100 %
 
  
