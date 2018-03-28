@@ -6,7 +6,7 @@ Piotr Szczepanski
 
 Compute Engine/Instance Template
 - g1-small (1 vCPU, 1.7 GB memory)
-- add start up script(replace index and feedback hostname - landing server check):
+- add startup script(replace index and feedback hostname - landing server check):
 
 ```shell 
 #! /bin/bash
@@ -30,10 +30,10 @@ EOF
 
 ```
 
-## Set up 2 Instance Groups (Fault Toleranace, High Availilbility)
+## Set up 2 Instance Groups (Fault Tolerance, High Availability)
 
 1st:
-set it multi-zone - europe-west2 London
+set it multi-zone - europe-west-2 London
 select the instance template
 autoscaling on - based on:
 - cpu usage - 40% => scale up
@@ -72,7 +72,7 @@ Network Services/Load Balancing
  
 - create new https health check 
 - traffic affinity (how the traffic is to be routed) 
-  - leave at none (session stickyness/ persistance) - new traffic to be directed to the same instance
+  - leave at none (session stickiness/ persistence) - new traffic to be directed to the same instance
 
 - host and path rules (leave at default) => https backend service
 - frontend configuration
@@ -102,8 +102,8 @@ Network Services/Load Balancing
 ## Testing Load Balancing: 
     - access Load Balancer from instance running from Belgium zone and Uk Zone
     
-## Testing AutoScaling - CPU  
-install following py script to boost CPU utilzation above 40% and trigger autoscaling
+## Testing Auto Scaling - CPU  
+install following py script to boost CPU utilization above 40% and trigger autoscaling
 
 ```shell
     #!/usr/bin/env python
@@ -130,5 +130,3 @@ if __name__ == '__main__':
  apt-get install cpulimit
  python python-cpu.py &
  ```
- 
- 
