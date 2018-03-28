@@ -67,8 +67,14 @@ Network Services/Load Balancing
  
 - create new https health check 
 - traffic affinity (how the traffic is to be routed) 
-  - leave at none (session stickyness/ persistance) - new traffiwill be directed to same instance
+  - leave at none (session stickyness/ persistance) - new traffic to be directed to the same instance
 
+- host and path rules (leave at default) => https backend service
+- frontend configuration
+  - name it
+  - protocol https
+  - ip address - select gcp-dev-1 IP
+  - create new certificate
  
  
 
