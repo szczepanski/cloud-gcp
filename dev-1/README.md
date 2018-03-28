@@ -6,7 +6,10 @@ More Complex 3 Tier AWS infustructure:
 
 https://github.com/szczepanski/cloud-aws
 
-Simple GCP Load Balancing below: 
+Simple GCP Load Balancing project and configurationm below: 
+
+https://console.cloud.google.com/home/dashboard?project=gcp-dev-1&_ga=2.237193800.-978524967.1507103458
+
 
 ## Set Up Instance Template 
 
