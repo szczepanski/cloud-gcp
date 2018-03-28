@@ -99,11 +99,10 @@ Network Services/Load Balancing
     openssl s_client -connect localhost:443
 
     ```
-    
-    ## Testing Load Balancing: 
+## Testing Load Balancing: 
     - access Load Balancer from instance running from Belgium zone and Uk Zone
     
-    ## Testing AutoScaling - CPU  
+## Testing AutoScaling - CPU  
 install following py script 
 
 ```shell
@@ -126,4 +125,7 @@ if __name__ == '__main__':
     pool.map(f, range(processes))
     
 ```    
- 
+ and
+ ```shell
+ apt-get install cpulimit
+ ```
